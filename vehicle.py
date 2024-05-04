@@ -1,38 +1,74 @@
 """
 Filename: vehicle.py
 Author: Lee Dillard
-Created: 04/22/2024
-Purpose: Create a vehicle module for import
+Created: 05/01/2024
+Purpose: Demonstrate creating a class object with four attributes and four methods along
+with user input
 """
+# Import the Console module for spiffy title
+from rich.console import Console
+# Import the Panel module for more spiffy title options
+from rich.panel import Panel
+# Initialize Console
+console = Console()
 
-# Initialize the Vehicle object with 4 parameters
-class Vehicle:
-    def __init__(self, _name, _vehicle, _passenger, _speed):
-    self._name = _name
-    self._vehicle = _vehicle
-    self._passenger = _passenger
-    self._speed = _speed
+# TODO: Initialize car class
+class Car:
+    def __init__(self, speed=55):
+       self._speed = speed
 
-    # Define get_name
-    def get_name(self):
-        return self._name
+    # TODO: Make title for the program
+    def title():
+        Console.print(
+            Panel.fit(
+            "  -->  Lucky's Car Lot  <--  ",
+            style="bold red",)
+        )
 
-    # Define get_vehicle
-    def get_vehicle(self):
-        return self._vehicle
+    # TODO: Get user name
+    def get_user_name(self):
+            self._user_name = input("Enter your name: ")
+            return self._user_name
 
-    # Define get_passenger
-    def get_passenger(self):
-        return self._passenger
+    # TODO: Get car model
+    def get_car_model(self):
+            self._car_model = input(f"Enter the car you would like to drive: ")
+            return self._car_model
 
-    # Define get_speed
-    def get_speed(self):
-        return self._speed
+    # TODO: Get seating capacity
+    def get_car_seating(self):
+            self._car_seating = input(f"Enter how many passengers: ")
+            return self._car_seating
+
+    # TODO: Get maximum speed
+    def get_max_speed(self):
+            self._max_speed = input(f"Enter the maximum speed: ")
+            return self._max_speed
     
-    # Define the accellerate method
+    # TODO: Get speed
+    def get_speed(self):
+            return self._speed
+
+    #TODO: # Define the accellerate method
     def accelerate(self):
             self._speed += 5
 
-    # Define the brake method
+    #TODO: Define the brake method
     def brake(self):
             self._speed -= 5
+
+    #TODO: Define the stop method
+    def stop(self):
+            self._speed == 0
+
+
+
+# TODO: Initialize program
+
+def main():
+    car = Car
+    car.get_user_name
+    car.get_car_model
+    car.get_car_seating
+    car.get_max_speed
+
