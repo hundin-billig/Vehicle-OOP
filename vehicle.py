@@ -15,14 +15,16 @@ console = Console()
 # TODO: Initialize car class
 class Car:
     def __init__(self, speed=55):
-       self._speed = speed
+        self._speed = speed
 
+       
     # TODO: Make title for the program
     def title():
-        Console.print(
+        console.print(
             Panel.fit(
             "  -->  Lucky's Car Lot  <--  ",
-            style="bold red",)
+            style="bold red"
+            )
         )
 
     # TODO: Get user name
@@ -52,14 +54,14 @@ class Car:
     #TODO: # Define the accellerate method
     def accelerate(self):
             self._speed += 5
-
+                  
     #TODO: Define the brake method
     def brake(self):
             self._speed -= 5
 
     #TODO: Define the stop method
     def stop(self):
-            self._speed == 0
+            self._speed = 0
 
 
 
@@ -67,8 +69,9 @@ class Car:
 
 def main():
     car = Car
-    car.get_user_name
-    car.get_car_model
-    car.get_car_seating
-    car.get_max_speed
+    Car.title()
+    car.get_user_name()
+    car.get_car_model()
+    car.get_car_seating()
+    car.get_max_speed()
 
