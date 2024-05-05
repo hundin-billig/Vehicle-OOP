@@ -29,23 +29,24 @@ class Car:
 
     # TODO: Get user name
     def get_user_name(self):
-            self._user_name = input("Enter your name: ")
+            self._user_name = console.input(f"[blue]Enter your name: [blue]")
             return self._user_name
 
     # TODO: Get car model
     def get_car_model(self):
-            self._car_model = input(f"Enter the car you would like to drive: ")
+            self._car_model = console.input(f"[blue]Enter the car you would like to drive: [blue]")
             return self._car_model
 
     # TODO: Get seating capacity
     def get_car_seating(self):
-            self._car_seating = input(f"Enter how many passengers: ")
+            self._car_seating = console.input(f"[blue]Enter how many passengers: [blue]")
             return self._car_seating
 
     # TODO: Get maximum speed
     def get_max_speed(self):
-            self._max_speed = input(f"Enter the maximum speed: ")
+            self._max_speed = console.input(f"[blue]Enter the maximum speed: [blue]")
             return self._max_speed
+    print()
     
     # TODO: Get speed
     def get_speed(self):
