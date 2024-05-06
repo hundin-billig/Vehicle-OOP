@@ -7,14 +7,19 @@ Purpose: Create a vehicle module for import
 
 # Import the Console module for spiffy title
 from rich.console import Console
-# Import the Panel module for more spiffy title options
+
+# Import the Panel module for even more spiffy title options
 from rich.panel import Panel
+
 # Initialize Console
 console = Console()
+
 # Install pygame
 # pip install pygame
+
 # Import pygame for audio control
 import pygame
+
 # Import vehicle module
 from vehicle import Car
 
@@ -32,7 +37,7 @@ pygame.mixer.pre_init(
     4096      # buffer size
     )
 
-#initialize pygame library
+# Initialize pygame library
 pygame.init()
 
 # Call methods
@@ -47,7 +52,7 @@ console.print(f"[yellow]{user_name} is driving a {car_model} that can seat {car_
 console.print(f"[yellow]The maximum speed of the {car_model} is {max_speed} mph.[yellow]")
 print()
 
-# TODO: User input with an exit statement
+# User input with an exit statement
 while True:
 
     choice = console.input(f"[bold white]Start (E)ngine | (A)ccelerate | (B)rake | (S)top  | E(x)it: [bold white]").lower()
@@ -56,8 +61,8 @@ while True:
 
         # Load soundfile
         pygame.mixer.music.load('./assets/start.wav')
-        # Set volume to 75%
-        pygame.mixer.music.set_volume(0.75)
+        # Set volume to 30%
+        pygame.mixer.music.set_volume(0.30)
         # Play sound
         pygame.mixer.music.play()
 
@@ -68,20 +73,21 @@ while True:
 
         # Load soundfile
         pygame.mixer.music.load('./assets/acellerate.wav')
-        # Set volume to 75%
-        pygame.mixer.music.set_volume(0.75)
+        # Set volume to 30%
+        pygame.mixer.music.set_volume(0.30)
         # Play sound
         pygame.mixer.music.play()
+
         car.accelerate()
         console.print(f"[bold green]The {car_model} is going {car.get_speed()} mph.[bold green]")
         print()
 
     elif choice == "b":
 
-                # Load soundfile
+        # Load soundfile
         pygame.mixer.music.load('./assets/downshift.wav')
-        # Set volume to 75%
-        pygame.mixer.music.set_volume(0.75)
+        # Set volume to 30%
+        pygame.mixer.music.set_volume(0.30)
         # Play sound
         pygame.mixer.music.play()
 
@@ -93,8 +99,8 @@ while True:
 
         # Load soundfile
         pygame.mixer.music.load('./assets/shutdown.wav')
-        # Set volume to 75%
-        pygame.mixer.music.set_volume(0.75)
+        # Set volume to 30%
+        pygame.mixer.music.set_volume(0.30)
         # Play sound
         pygame.mixer.music.play()
 
@@ -103,14 +109,7 @@ while True:
         print()
 
     elif choice == "x":
+
         console.print(f"[red]Thank you for visiting our dealership. Have a good day![red]")
         print()
         break
-
-
-
-# If a standalone program, call the main function
-# Else, use as a module"""
-    
-#if __name__ == "__main__":
-    #main()
